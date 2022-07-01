@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&display=swap');
+
+
+.SIDEBAR_STYLE_LIGHT{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 16rem;
+    padding: 2rem 1rem;
+    background-color: #f8f9fa;
+    color:#78C2AD;
+    z-index: 1;
+}
+.SIDEBAR_STYLE_DARK{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 16rem;
+    padding: 2rem 1rem;
+    background-color: #375a7f;
+    color:white;
+    z-index: 1;
+}
+
+.navtitle{
+    text-align: center;
+    color: #78C2AD;
+    font-size: 35px !important;
+    font-family: 'Anek Malayalam', sans-serif;
+}
+.navimage{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.navdescription{
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Anek Malayalam', sans-serif;
+    color:#78C2AD ;
+}
+.navlink{
+    padding-left: 10px;
+    display: block;
+    list-style: none !important;
+    font-size: 25px;
+    font-family: 'Anek Malayalam', sans-serif;
+    color: #78C2AD;
+}
+.navlink:hover{
+    background-color: #008eac;
+    border: 1px solid #008eac;
+    border-radius: 25px; 
+    color: white !important;
+}
+.LightDarkToggle{
+    text-align: center;
+}
+
+.fa-cog{
+    text-decoration: none;
+    position: absolute;
+    bottom:10px;
+    padding-left:80%;
+    font-size: 25px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: inline-flex;
+    margin-right: 5px;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: transparent;
+    color: white;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: transparent;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: left;
+  }
+
+  .content-holder{
+    margin-left: 18rem;
+    margin-right: 2rem;
+    padding: 2rem 1rem;
+    z-index: -1;
+    
+  } 
+  .page-content{
+    overflow-x: hidden !important;
+  }
+
+  .card_title{
+    text-align: left;
+    padding: 10px;
+  }
+  .DisplayFlex{
+    display: inline-flex;
+  }
+
+
+.flip-card2 {
+    background-color: transparent;
+    width: 500px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: inline-flex;
+    margin-right: 5px;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card2:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: grey;
+    color: white;
+    height: ;
+    border-radius: 25px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: grey;
+    color: white;
+    transform: rotateY(180deg);
+    height: 200px;
+    border-radius: 25px;
+  }
+
+  .content-holder{
+    margin-left: 20rem;
+    margin-right: 2rem;
+    padding: 3rem 1rem;
+    width: 100% !important;
+  } 
+  .card_title{
+    text-align: left;
+    padding: 10px;
+  }
+  .DisplayFlex{
+    display: inline-flex;
+  }
+
+  .flip-card3 {
+    background-color: transparent;
+    width: 195px;
+    height: 200px !important;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: inline-flex;
+    margin-right: 5px;
+  }
+  .flip-card3:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-inner3 {
+    position: relative;
+    width: 190px !important;
+    height: 100px !important;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .toast-body{
+    background-color: #78C2AD;
+    width: 100%;
+    height: 80%;
+  }
+
+  .list-group li{
+    color: white;
+    background-color: #78C2AD !important;
+  }
+
+  .flip-card5 {
+    background-color: transparent;
+    width: 150px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: inline-flex;
+    margin-right: 5px;
+  }
+  .flip-card5:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .navdescription:hover{
+    background-color: #008eac;
+    border: 1px solid #008eac;
+    border-radius: 25px; 
+    color: white;
+  }
+
+  .flip-card7{
+    background-color: transparent;
+    width: 160px;
+    height: 320px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: inline-flex;
+    margin-right: 5px;
+  }
+  .flip-card7:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
