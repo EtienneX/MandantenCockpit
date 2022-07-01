@@ -12,7 +12,6 @@ import sql_queries
 
 #The Different cards will be declared here
 
-
 #Card 1 #################################################################################################
 card_1 = html.Div(
     children=[

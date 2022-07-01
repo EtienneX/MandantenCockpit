@@ -173,7 +173,7 @@
   .flip-card-front {
     background-color: grey;
     color: white;
-    height: ;
+    height: 200px;
     border-radius: 25px;
   }
   
@@ -260,4 +260,10 @@
   }
   .flip-card7:hover .flip-card-inner {
     transform: rotateY(180deg);
+  }
+
+  .card_select{ 
+    float: left;
+    margin-left: 50px;
+    z-index: 1;
   }
