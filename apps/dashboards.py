@@ -10,7 +10,7 @@ import dash_daq as daq
 from dash_bootstrap_templates import ThemeSwitchAIO, template_from_url
 from Templates import cards, content
 import sql_queries
-from app import pre_def_cards
+from app import pre_def_cards, user_selected_cards
 
 # Here Will all the Cards be Displayed ###########################################################
 
@@ -20,11 +20,23 @@ dashboard_layout = html.Div(
     ],
 ),
 
+seite = list()
+
 def GetCards():
     count = 1
-    toggle = "card_" + str(count)
+    toggle = "cards.card_" + str(count)
+    toggle_val = False
+    toggle_label = "Karte ist nicht ausgewählt"
+    for y in user_selected_cards:
+        if(y in user_selected_cards):
+            toggle_label = "Karte ist ausgewählt"
+            toggle_val = True
+        else:
+            toggle_label = "Karte nicht ausgewählt"
+            toggle_val=False
     for x in pre_def_cards: 
-        return html.Div(
+        print(len(pre_def_cards)),
+        content = html.Div(
             children=[
                 dcc.Link("Home > Dashbaords", href="/",style={"text-decoration":"none", "color":"#375A7F"}),
                 html.Hr(),
@@ -46,8 +58,9 @@ def GetCards():
                     children=[
                         daq.ToggleSwitch(
                         id=toggle,
-                        label='Karte ist nicht ausgewählt',
-                        labelPosition='bottom'
+                        label=toggle_label,
+                        labelPosition='bottom',
+                        value=toggle_val,
                         ),
                     ],
                     className="card_select",
@@ -57,5 +70,15 @@ def GetCards():
                 html.Hr(), 
             ],
         )
+        seite.append(content)
     count+=1
-    print("Current card num:", count),
+    print("Current card num:", count)
+    seite_anzeigen()
+
+def seite_anzeigen():
+    for s in seite:
+        html.Div(
+            children=[
+                s
+            ],
+        )

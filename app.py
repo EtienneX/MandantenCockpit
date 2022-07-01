@@ -15,6 +15,7 @@ from Templates import cards, content
 import sql_queries
 from apps import dashboards, settings
 
+
 #Font Awesome Icons#############################################################################
 font_awesome = ['/assets/fontAwesome/font-awesome.min.css']
 ################################################################################################
@@ -32,7 +33,7 @@ pre_def_cards = [cards.card_1,cards.card_2,cards.card_3,cards.card_4,cards.card_
 #############################
 
 # User Configured layout list
-user_conf_layout = list()
+user_selected_cards = [cards.card_1]
 #############################
 
 # Themes #############################
@@ -103,8 +104,6 @@ def render_page_content(pathname):
             html.P(f"The pathname {pathname} was not recognised..."),
         ]
     )
-
-
 if __name__ == '__main__':
     app.run_server(debug=True,)
 
